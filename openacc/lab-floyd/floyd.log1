@@ -1,0 +1,26 @@
+main:
+     22, Memory set idiom, loop replaced by call to __c_mset4
+     43, #omp parallel
+time 1.063020 2400
+test 1114 2099 -0.351597
+test 1562 1856 -0.818695
+test 1929 924 -0.409053
+test 2200 2122 -0.236780
+test 450 1605 -0.494496
+test 515 1139 -0.526653
+test 2125 2166 -0.461825
+test 515 1372 -0.472302
+test 973 2141 -0.479141
+test 773 1809 -0.472171
+test 1274 457 -0.303956
+test 24 2241 -0.392215
+test 2129 375 -0.467766
+test 1958 1848 -0.472492
+test 1023 1572 -0.650282
+test 544 2137 -0.443251
+test 1624 58 -0.516323
+test 1593 1153 -0.588491
+test 982 1746 -0.528510
+test 875 1432 -0.458209
+62.96user 0.49system 0:01.08elapsed 5854%CPU (0avgtext+0avgdata 29232maxresident)k
+0inputs+0outputs (162major+6249minor)pagefaults 0swaps

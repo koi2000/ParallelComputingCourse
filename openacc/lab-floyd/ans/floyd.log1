@@ -1,0 +1,107 @@
+NVC++-W-0155-OpenACC multicore code disabled inside OpenMP parallel construct  (floyd.cpp: 59)
+NVC++-W-0155-OpenACC multicore code disabled inside OpenMP parallel construct  (floyd.cpp: 65)
+NVC++-W-0155-OpenACC multicore code disabled inside OpenMP parallel construct  (floyd.cpp: 71)
+main:
+      5, include "math.h"
+          15, include "math.h"
+               36, include "cmath"
+                    15, include "cmath"
+                       1935, include "specfun.h"
+                              45, include "stl_algobase.h"
+                                   45, #omp parallel
+                                       46, Begin single region
+                                           End single region
+                                           Barrier
+                                       73, Barrier
+                                       84, Barrier
+     24, Memory set idiom, loop replaced by call to __c_mset4
+NVC++/x86-64 Linux 23.3-0: compilation completed with warnings
+#num_dev: 0
+#num_thread: 64
+#device_id: 0 0 38 38
+#device_id: 62 2356 2394 38
+#device_id: 22 836 874 38
+#device_id: 13 494 532 38
+#device_id: 18 684 722 38
+#device_id: 32 1216 1254 38
+#device_id: 50 1900 1938 38
+#device_id: 43 1634 1672 38
+#device_id: 37 1406 1444 38
+#device_id: 58 2204 2242 38
+#device_id: 57 2166 2204 38
+#device_id: 12 456 494 38
+#device_id: 59 2242 2280 38
+#device_id: 19 722 760 38
+#device_id: 42 1596 1634 38
+#device_id: 45 1710 1748 38
+#device_id: 4 152 190 38
+#device_id: 40 1520 1558 38
+#device_id: 51 1938 1976 38
+#device_id: 31 1178 1216 38
+#device_id: 29 1102 1140 38
+#device_id: 1 38 76 38
+#device_id: 53 2014 2052 38
+#device_id: 3 114 152 38
+#device_id: 9 342 380 38
+#device_id: 38 1444 1482 38
+#device_id: 24 912 950 38
+#device_id: 39 1482 1520 38
+#device_id: 14 532 570 38
+#device_id: 8 304 342 38
+#device_id: 25 950 988 38
+#device_id: 30 1140 1178 38
+#device_id: 5 190 228 38
+#device_id: 20 760 798 38
+#device_id: 16 608 646 38
+#device_id: 33 1254 1292 38
+#device_id: 10 380 418 38
+#device_id: 41 1558 1596 38
+#device_id: 17 646 684 38
+#device_id: 21 798 836 38
+#device_id: 49 1862 1900 38
+#device_id: 61 2318 2356 38
+#device_id: 46 1748 1786 38
+#device_id: 60 2280 2318 38
+#device_id: 56 2128 2166 38
+#device_id: 6 228 266 38
+#device_id: 54 2052 2090 38
+#device_id: 48 1824 1862 38
+#device_id: 55 2090 2128 38
+#device_id: 52 1976 2014 38
+#device_id: 47 1786 1824 38
+#device_id: 7 266 304 38
+#device_id: 23 874 912 38
+#device_id: 35 1330 1368 38
+#device_id: 2 76 114 38
+#device_id: 34 1292 1330 38
+#device_id: 36 1368 1406 38
+#device_id: 44 1672 1710 38
+#device_id: 15 570 608 38
+#device_id: 11 418 456 38
+#device_id: 63 2394 2400 6
+#device_id: 27 1026 1064 38
+#device_id: 26 988 1026 38
+#device_id: 28 1064 1102 38
+time 1.008772 2400
+test 1114 2099 -0.351597
+test 1562 1856 -0.818695
+test 1929 924 -0.409053
+test 2200 2122 -0.236780
+test 450 1605 -0.494496
+test 515 1139 -0.526653
+test 2125 2166 -0.461825
+test 515 1372 -0.472302
+test 973 2141 -0.479141
+test 773 1809 -0.472171
+test 1274 457 -0.303956
+test 24 2241 -0.392215
+test 2129 375 -0.467766
+test 1958 1848 -0.472492
+test 1023 1572 -0.650282
+test 544 2137 -0.443251
+test 1624 58 -0.516323
+test 1593 1153 -0.588491
+test 982 1746 -0.528510
+test 875 1432 -0.458209
+60.46user 2.21system 0:01.03elapsed 6066%CPU (0avgtext+0avgdata 51984maxresident)k
+0inputs+0outputs (113major+11828minor)pagefaults 0swaps

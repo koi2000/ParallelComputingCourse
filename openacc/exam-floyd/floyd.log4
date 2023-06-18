@@ -1,0 +1,46 @@
+main:
+     23, Memory set idiom, loop replaced by call to __c_mset4
+     45, #omp parallel
+     50, #omp parallel
+         85, Barrier
+     57, Generating copyin(data[begin*6000:blocksize*6000]) [if not already present]
+         Generating create(dkj[:6000],dik[:6000]) [if not already present]
+     58, Generating update device(dik[:6000],dkj[:6000])
+         Generating implicit firstprivate(end,begin)
+         Generating NVIDIA GPU code
+         63, #pragma acc loop gang /* blockIdx.x */
+         67, #pragma acc loop vector(1024) /* threadIdx.x */
+     67, Loop is parallelizable
+     73, Generating implicit firstprivate(begin,end)
+         Generating NVIDIA GPU code
+         75, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+     75, Generating implicit firstprivate(k)
+     79, Generating update self(dik[begin:blocksize])
+         Generating NVIDIA GPU code
+         81, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+     81, Generating implicit firstprivate(k)
+     84, Generating update self(dkj[:6000])
+     88, Generating update self(data[begin*6000:blocksize*6000])
+time 1.702572 6000
+test 2161 4093 -0.683869
+test 4560 849 -0.384304
+test 4615 5729 -0.371038
+test 5055 5059 -0.487377
+test 1882 5483 -0.559907
+test 1312 3253 -0.648813
+test 4565 5567 -0.638792
+test 4094 4590 -0.523406
+test 4765 4454 -0.760118
+test 4230 4312 -0.455890
+test 4446 5673 -0.539349
+test 5203 3022 -0.435516
+test 3117 548 -0.571684
+test 1839 1493 -0.294103
+test 71 2247 -0.472646
+test 2630 2585 -0.511463
+test 692 1190 -0.315346
+test 3434 5308 -0.457022
+test 1271 2841 -0.614242
+test 4367 3153 -0.563043
+3.86user 1.03system 0:01.98elapsed 247%CPU (0avgtext+0avgdata 627488maxresident)k
+0inputs+8outputs (1major+150118minor)pagefaults 0swaps

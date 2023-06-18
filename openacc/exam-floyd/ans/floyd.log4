@@ -1,0 +1,84 @@
+index(int, int):
+     13, Generating implicit acc routine seq
+         Generating NVIDIA GPU code
+main:
+      5, include "math.h"
+          15, include "math.h"
+               36, include "cmath"
+                    15, include "cmath"
+                       1935, include "specfun.h"
+                              45, include "stl_algobase.h"
+                                   45, #omp parallel
+                                       46, Begin single region
+                                           End single region
+                                           Barrier
+                                       73, Barrier
+                                       84, Barrier
+     24, Memory set idiom, loop replaced by call to __c_mset4
+     56, Generating enter data create(copy[:36000000],dkj[:6000],dik[:6000])
+         Generating enter data copyin(data[:36000000])
+     59, Generating present(d0[:],d1[:])
+         Generating implicit firstprivate(begin,end)
+         Generating NVIDIA GPU code
+         61, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+     59, Generating implicit copyout(dik[begin:end-begin]) [if not already present]
+     61, Generating implicit  (k)
+     65, Generating update self(dik[begin:step])
+         Generating present(d1[:],d0[:])
+         Generating NVIDIA GPU code
+         67, #pragma acc loop gang, vector(128) /* blockIdx.x threadIdx.x */
+     65, Generating implicit copyout(dkj[:6000]) [if not already present]
+     67, Generating implicit firstprivate(k)
+     71, Generating update self(dkj[:6000])
+         Generating update device(dkj[:6000],dik[:6000])
+         Generating present(d1[:],d0[:])
+         Generating implicit firstprivate(begin,end)
+         Generating NVIDIA GPU code
+         78, #pragma acc loop gang, vector   /* blockIdx.x threadIdx.x */
+         79,   /* blockIdx.x threadIdx.x tiled */
+     71, Generating implicit copyin(dkj[:6000],dik[begin:end-begin]) [if not already present]
+     79, Generating implicit private(_T25_5541,_T22_5541)
+     99, Generating update self(data[begin*6000:step*6000])
+         Generating exit data delete(dkj[:6000],dik[:6000],data[:36000000],copy[:36000000])
+float const& std::max<float>(float const&, float const&):
+      5, include "math.h"
+          15, include "math.h"
+               36, include "cmath"
+                    15, include "cmath"
+                       1935, include "specfun.h"
+                              45, include "stl_algobase.h"
+                                  255, Generating implicit acc routine seq
+                                       Generating NVIDIA GPU code
+#num_dev: 8
+#num_thread: 8
+#device_id: 7 5250 6000 750
+#device_id: 4 3000 3750 750
+#device_id: 1 750 1500 750
+#device_id: 0 0 750 750 
+#device_id: 5 3750 4500 750
+#device_id: 6 4500 5250 750
+#device_id: 3 2250 3000 750
+#device_id: 2 1500 2250 750
+time 3.402403 6000
+test 2161 4093 -0.683869
+test 4560 849 -0.384304
+test 4615 5729 -0.371038
+test 5055 5059 -0.487377
+test 1882 5483 -0.559907
+test 1312 3253 -0.648813
+test 4565 5567 -0.638792
+test 4094 4590 -0.523406
+test 4765 4454 -0.760118
+test 4230 4312 -0.455890
+test 4446 5673 -0.539349
+test 5203 3022 -0.435516
+test 3117 548 -0.571684
+test 1839 1493 -0.294103
+test 71 2247 -0.472646
+test 2630 2585 -0.511463
+test 692 1190 -0.315346
+test 3434 5308 -0.457022
+test 1271 2841 -0.614242
+test 4367 3153 -0.563043
+13.72user 3.36system 0:04.19elapsed 407%CPU (0avgtext+0avgdata 1543936maxresident)k
+0inputs+8outputs (1major+256099minor)pagefaults 0swaps

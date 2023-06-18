@@ -1,0 +1,34 @@
+index(int, int):
+     13, Generating implicit acc routine seq
+         Generating NVIDIA GPU code
+main:
+     22, Memory set idiom, loop replaced by call to __c_mset4
+     43, Generating NVIDIA GPU code
+         46, #pragma acc loop gang, worker(4) /* blockIdx.x threadIdx.y */
+         49, #pragma acc loop vector(32) /* threadIdx.x */
+     43, Generating implicit copy(data[:]) [if not already present]
+     49, Loop is parallelizable
+         Generating implicit firstprivate(k)
+time 0.811786 3600
+test 1591 172 -0.763397
+test 802 369 -0.453210
+test 2535 1922 -0.288441
+test 2509 360 -0.270466
+test 3035 2689 -0.397025
+test 3529 2138 -0.559413
+test 3380 3190 -0.562856
+test 1650 2709 -0.484510
+test 2813 3211 -0.411624
+test 3283 3454 -0.454825
+test 2055 1613 -0.629674
+test 3196 677 -0.532822
+test 697 3166 -0.443936
+test 2548 3111 -0.529714
+test 334 1171 -0.424709
+test 1307 1078 -0.537585
+test 1343 1261 -0.535192
+test 599 278 -0.486341
+test 3183 3108 -0.501162
+test 3390 1771 -0.395187
+0.85user 0.17system 0:01.04elapsed 98%CPU (0avgtext+0avgdata 156144maxresident)k
+0inputs+0outputs (20major+11584minor)pagefaults 0swaps

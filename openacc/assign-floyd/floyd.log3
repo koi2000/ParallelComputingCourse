@@ -1,0 +1,30 @@
+main:
+     38, Generating copy(data[:23040000]) [if not already present]
+     42, Generating NVIDIA GPU code
+         44, #pragma acc loop gang, worker(4) /* blockIdx.x threadIdx.y */
+         46, #pragma acc loop vector(128) /* threadIdx.x */
+     46, Loop is parallelizable
+         Generating implicit firstprivate(k)
+time 1.254653 4800
+test 1683 3274 -0.706498
+test 632 2448 -0.447264
+test 842 583 -0.503465
+test 807 4278 -0.626579
+test 803 353 -0.561426
+test 4022 1321 -0.534807
+test 2934 2255 -0.506989
+test 3334 4036 -0.535419
+test 3344 3528 -0.635352
+test 4058 965 -0.721051
+test 3765 3241 -0.468802
+test 2756 3304 -0.441437
+test 4583 1289 -0.648130
+test 1697 2723 -0.456125
+test 4475 3795 -0.479226
+test 1303 1358 -0.472469
+test 2269 4688 -0.527612
+test 1759 1063 -0.515894
+test 471 518 -0.486703
+test 542 1274 -0.587901
+1.13user 0.26system 0:01.40elapsed 99%CPU (0avgtext+0avgdata 263100maxresident)k
+0inputs+8outputs (0major+50299minor)pagefaults 0swaps

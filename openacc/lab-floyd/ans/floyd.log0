@@ -1,0 +1,26 @@
+#num_dev: 0
+#num_thread: 1
+#device_id: 0 0 1200 1200
+time 9.751188 1200
+test 65 506 -0.544105
+test 272 605 -0.519495
+test 391 617 -0.342672
+test 384 274 -0.396835
+test 1136 489 -0.337305
+test 657 761 -0.485585
+test 893 278 -0.457243
+test 163 278 -0.431883
+test 366 221 -0.400291
+test 794 598 -0.520162
+test 712 749 -0.404731
+test 390 1090 -0.518321
+test 547 715 -0.355524
+test 366 102 -0.467554
+test 627 1029 -0.434617
+test 808 1044 -0.606123
+test 687 232 -0.404254
+test 449 230 -0.481887
+test 2 1186 -0.455573
+test 504 1138 -0.456215
+9.76user 0.00system 0:09.76elapsed 99%CPU (0avgtext+0avgdata 16776maxresident)k
+0inputs+8outputs (0major+3099minor)pagefaults 0swaps
